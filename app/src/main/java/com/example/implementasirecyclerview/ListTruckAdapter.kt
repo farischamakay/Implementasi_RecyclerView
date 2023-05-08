@@ -1,14 +1,19 @@
 package com.example.implementasirecyclerview
-
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 
 class ListTruckAdapter(private val listTruk:ArrayList<Truck>) : RecyclerView.Adapter<ListTruckAdapter.ListViewHolder>(){
+
+    private lateinit var onItemClickCallback : OnItemClickCallback
+
+    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback){
+        this.onItemClickCallback = onItemClickCallback
+    }
+
 
     class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imgPhoto :ImageView = itemView.findViewById(R.id.img_item_photo)
@@ -21,18 +26,22 @@ class ListTruckAdapter(private val listTruk:ArrayList<Truck>) : RecyclerView.Ada
         return ListViewHolder(view)
     }
 
-    override fun getItemCount(): Int {
-        TODO("Not yet implemented")
-    }
+    override fun getItemCount(): Int =
+        listTruk.size
+
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
         val (name, description, photo) = listTruk[position]
         holder.imgPhoto.setImageResource(photo)
         holder.nameTruck.text = name
         holder.descTruck.text = description
-        holder.itemView.setOnClickListener{
-            Toast.makeText(holder.itemView.context, "Kamu memilih" + listTruk[holder.adapterPosition].name, Toast.LENGTH_SHORT).show()
+        holder.itemView.setOnClickListener {
+            onItemClickCallback.onItemClicked(listTruk[holder.adapterPosition])
         }
+    }
+
+    interface OnItemClickCallback{
+        fun onItemClicked(data : Truck)
     }
 
 }

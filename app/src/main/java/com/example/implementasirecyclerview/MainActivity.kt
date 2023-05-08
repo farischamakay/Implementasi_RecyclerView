@@ -2,6 +2,7 @@ package com.example.implementasirecyclerview
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -31,10 +32,26 @@ class MainActivity : AppCompatActivity() {
         return listTruck
     }
 
+
     private fun showRecycleView (){
         rvTruck.layoutManager = LinearLayoutManager(this)
         val listTruckAdapter = ListTruckAdapter(list)
         rvTruck.adapter = listTruckAdapter
+
+        listTruckAdapter.setOnItemClickCallback(
+            object : ListTruckAdapter.OnItemClickCallback {
+                override fun onItemClicked(data: Truck) {
+                    showSelectedTruck(data)
+                }
+            }
+        )
+
+
+    }
+
+    private fun showSelectedTruck(truck: Truck){
+        Toast.makeText(this,"Kamu memilih " + truck.name, Toast.LENGTH_SHORT).show()
+
     }
 
 
