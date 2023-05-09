@@ -14,21 +14,10 @@ class ListTruckAdapter(private val listTruk:ArrayList<Truck>) : RecyclerView.Ada
         this.onItemClickCallback = onItemClickCallback
     }
 
-
-    class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val imgPhoto :ImageView = itemView.findViewById(R.id.img_item_photo)
-        val nameTruck : TextView = itemView.findViewById(R.id.tv_item_name)
-        val descTruck: TextView = itemView.findViewById(R.id.tv_item_description)
-    }
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, i: Int): ListViewHolder {
         val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_list_truck, parent,false)
         return ListViewHolder(view)
     }
-
-    override fun getItemCount(): Int =
-        listTruk.size
-
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
         val (name, description, photo) = listTruk[position]
@@ -39,6 +28,16 @@ class ListTruckAdapter(private val listTruk:ArrayList<Truck>) : RecyclerView.Ada
             onItemClickCallback.onItemClicked(listTruk[holder.adapterPosition])
         }
     }
+
+    override fun getItemCount(): Int =
+        listTruk.size
+
+    class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val imgPhoto :ImageView = itemView.findViewById(R.id.img_item_photo)
+        val nameTruck : TextView = itemView.findViewById(R.id.tv_item_name)
+        val descTruck: TextView = itemView.findViewById(R.id.tv_item_description)
+    }
+
 
     interface OnItemClickCallback{
         fun onItemClicked(data : Truck)
