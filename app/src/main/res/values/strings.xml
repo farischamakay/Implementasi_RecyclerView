@@ -1,3 +1,91 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Implementasi RecyclerView</string>
+    <string name="trucks_name">Nama Jenis Truk</string>
+    <string name="description">Deskripsi</string>
+    <string name="list">List</string>
+    <string name="grid">Grid</string>
+
+    <string-array name="data_name">
+        <item>Truck CDD</item>
+        <item>Truck Fuso</item>
+        <item>Granmax</item>
+        <item>Pickup</item>
+        <item>Trailer</item>
+        <item>Truck Tronton</item>
+        <item>Truck Box CED</item>
+        <item>Truck Trintin</item>
+        <item>Truck Trinton</item>
+        <item>Truck Wingbox</item>
+    </string-array>
+
+    <string-array name="data_description">
+        <item>Truk ini memiliki dimensi yang lebih besar. Truk ini ialah Truk CDD Box. Truk CDD box adalah segelintir nama panggilan atau istilah untuk truk berkapasitas 4 ton ini. Namanya adalah singkatan dari Colt Diesel Double. Truk ini adalah tipe truk yang masuk dalam kategori truk berukuran kecil. Perbedaan mendasar di antara engkel serta truk double engkel adalah jumlah ban serta kapasitasnya. Engkel memiliki 4 ban, sementara double engkel memiliki 6 ban yakni 2 di depan serta 4 di belakang dan tentu saja kapasitas truk semakin besar dari truk CDE.</item>
+        <item>Truk jenis lainnya adalah truk fuso. Truk fuso adalah salah satu tipe truk yang hampir seperti dengan truk CDD (non-long) tetapi kapasitas fuso tambah lebih besar, yaitu 25 CBM dengan berat maksimal 7 Ton. Fuso adalah truk keluaran dari produsen Mitsubishi yang fokus pada pengeluaran produk kendaraan niaga di kelas light dan medium truck. Walaupun terbilang kecil, truk ini akan terlihat besar seperti truk tronton loh dari luar.</item>
+        <item>Berikutnya ada mobil Grand Max. Mobil Grand Max sendiri ialah kendaraan Sewa truk ringan yang memiliki kabin tertutup serta mempunyai box dibelakang untuk membawa barang bawaan atau kargo. Kendaraan ini umumnya dipakai untuk kepentingan komersial ataupun niaga serta biasa dipakai untuk beberapa pekerjaan yang membutuhkan antar-jemput barang maupun muatan.</item>
+        <item>Jenis truk yang pertama adalah mobil Pick Up. Pick-up atau Pickup ialah kendaraan Sewa truk ringan yang mempunyai kabin tertutup serta bak terbuka dibelakang untuk membawa barang bawaan atau kargo. Kendaraan ini umumnya dipakai untuk kepentingan komersial/niaga serta biasa dipakai untuk pekerjaan-pekerjaan yang membutuhkan antar-jemput barang atau muatan.</item>
+        <item>Truk jenis berikutnya adalah bernama truk trailer. Truk Trailer salah satu tipe armada transportasi yang mempunyai daya angkut sangatlah kuat, dari 20 Ton hingga 60 Ton. Ini lantaran truk trailer memang dibuat jadi kendaraan kargo untuk pengiriman alat serta kendaraan berat. Trailer 20 feet mempunyai banyaknya sumbu 4 dan 5. Sedang trailer 40 feet mempunyai banyaknya sumbu 6. Tidak seperti armada yang lain, trailer mempunyai jenis yang lebih banyak, seperti trailer lowbed, flatbed, flat track, box, bak serta yang lain. </item>
+        <item tools:ignore="TypographyDashes">Jenis truk berikutnya dan memiliki bobot lebih besar dibandingkan dengan truk–truk sebelumnya, yaitu truk tronton. Truk tronton ialah tipe truk yang mempunyai 3 sumbu roda dengan jumlah roda 10 dan konfigurasi rodanya ialah 1-2-2. Kapasitas truk tronton dapat membawa barang sekitar 30 kubikasi / CBM dengan berat maksimal 10 Ton. Tronton jadi salah satunya truk yang cukup disukai oleh pebisnis ekspedisi truk maupun usaha di bidang sektor lainnya, sebab selain harganya murah. dalam 1 truk tronton dapat membawa barang yang lumayan banyak. </item>
+        <item>Truk jenis berikutnya adalah Truk CDE. Truk CDE adalah sebuah singkatan dari Colt Diesel Engkel, yakni sebuah tipe truk berkapasitas tergolong kecil. Tipe truk ini seringkali Anda lihat di gang kecil sebab memang masih dapat masuk ke jalan kecil serta truk ini bisa dipebolehkan untuk lewat di tol dalam kota. Truk ini sebut CDE sebab jumlah ban yang masih berjumlah 4, yang terbagi dalam 2 ban depan serta 2 ban belakang. Tetapi jangan salah, truk kecil ini dapat membawa barang sampai kapasitas 2000 Kg.</item>
+        <item tools:ignore="TypographyDashes">Mobil trintin adalah mobil truk dengan kapasitas yang mencapai 20 ton atau lebih. Truk ini juga menjadi salah satu tipe truk yang bisa digunakan untuk mengangkut barang dengan jumlah besar dan banyak. Mobil tronton dan trintin sama-sama memiliki 3 sumbu roda. Hanya saja perbedaan keduanya terletak pada bagian sumbu roda tengah. Mekanisme power steeringnya menggunakan sistem FWS (Four Wheel Steering). Artinya, truk trintin memiliki 4 roda yang bisa dibelokan ke arah yang sama secara berbarengan. Sistem kemudinya ini terdapat pada sumbu roda depan dan tengah. Secara rinci, sumbu truk trintin terbagi atas 2 sumbu depan dan 1 sumbu di belakang. Konfigurasinya yaitu 1-1-1 dan juga ada 1-1-2. Salah satu kelebihan dari mobil trintin ini ialah sistem 4WS sangat membantunya untuk bermanuver baik dalam kecepatan rendah maupun tinggi. Namun, karena truk ini memiliki ukuran yang cukup panjang, jadi radius putarnya juga dilakukan sangat jauh.</item>
+        <item>Truk Trinton merupakan truk besar lainnya yang memiliki 2 roda di depan 2 roda di bagian tengah dan 8 roda di bagian belakang. Trinton sendiri mirip seperti truk gandeng atau trailer, namun ternyata truk ini memiliki satu bagian karoseri yang sama. Truk ini mampu mengangkut beban barang hingga 30 ton loh! Truk trinton memiliki roda hingga 12 buah, biasanya truk satu ini memiliki kecepatan yang sangat lama saat berjalan, jadi ada baiknya menyingkir jika truk satu ini lewat.</item>
+        <item>Apabila sebelumnya ada Tronton, kali ini ada tipe armada yang lebih favorite , yakni truk Wingbox. Wingbox sendiri banyak disukai sebab mempunyai banyak kelebihan, diantaranya ialah pada 3 sisi (kanan, kiri serta belakang) bisa dibuka semuanya hingga bisa mempercepat waktu pekerjaan bongkar muat barang dalam muatan. Truk Wingbox sendiri mempunyai 2 tipe truk berdasar pada sumbu, yaitu 2 untuk truk wingbox dan 3 sumbu untuk truk tronton wingbox. Berat maksimal serta kemampuan muatan wingbox sangat beragam, semua sebab jenis karoseri wingbox ialah jenis built-up (bukan bikinan produsen truk). Sebab mempunyai 2 tipe sumbu, karena itu tidak jarang wingbox seringkali dikatakan dengan truk tronton wingbox atau truk engkel wingbox.</item>
+    </string-array>
+
+    <string-array name="data_photo">
+        <item>@drawable/cdd</item>
+        <item>@drawable/fuso</item>
+        <item>@drawable/granmax</item>
+        <item>@drawable/pickup</item>
+        <item>@drawable/trailer</item>
+        <item>@drawable/tronton</item>
+        <item>@drawable/truckbox_ced</item>
+        <item>@drawable/trintin</item>
+        <item>@drawable/trinton</item>
+        <item>@drawable/wingbox</item>
+    </string-array>
+    <string name="title_activity_detail">DetailActivit</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="lorem_ipsum">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
+        volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
+        dui nec risus. Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad
+        litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse blandit eleifend
+        diam, vel rutrum tellus vulputate quis. Aliquam eget libero aliquet, imperdiet nisl a,
+        ornare ex. Sed rhoncus est ut libero porta lobortis. Fusce in dictum tellus.\n\n
+        Suspendisse interdum ornare ante. Aliquam nec cursus lorem. Morbi id magna felis. Vivamus
+        egestas, est a condimentum egestas, turpis nisl iaculis ipsum, in dictum tellus dolor sed
+        neque. Morbi tellus erat, dapibus ut sem a, iaculis tincidunt dui. Interdum et malesuada
+        fames ac ante ipsum primis in faucibus. Curabitur et eros porttitor, ultricies urna vitae,
+        molestie nibh. Phasellus at commodo eros, non aliquet metus. Sed maximus nisl nec dolor
+        bibendum, vel congue leo egestas.\n\n
+        Sed interdum tortor nibh, in sagittis risus mollis quis. Curabitur mi odio, condimentum sit
+        amet auctor at, mollis non turpis. Nullam pretium libero vestibulum, finibus orci vel,
+        molestie quam. Fusce blandit tincidunt nulla, quis sollicitudin libero facilisis et. Integer
+        interdum nunc ligula, et fermentum metus hendrerit id. Vestibulum lectus felis, dictum at
+        lacinia sit amet, tristique id quam. Cras eu consequat dui. Suspendisse sodales nunc ligula,
+        in lobortis sem porta sed. Integer id ultrices magna, in luctus elit. Sed a pellentesque
+        est.\n\n
+        Aenean nunc velit, lacinia sed dolor sed, ultrices viverra nulla. Etiam a venenatis nibh.
+        Morbi laoreet, tortor sed facilisis varius, nibh orci rhoncus nulla, id elementum leo dui
+        non lorem. Nam mollis ipsum quis auctor varius. Quisque elementum eu libero sed commodo. In
+        eros nisl, imperdiet vel imperdiet et, scelerisque a mauris. Pellentesque varius ex nunc,
+        quis imperdiet eros placerat ac. Duis finibus orci et est auctor tincidunt. Sed non viverra
+        ipsum. Nunc quis augue egestas, cursus lorem at, molestie sem. Morbi a consectetur ipsum, a
+        placerat diam. Etiam vulputate dignissim convallis. Integer faucibus mauris sit amet finibus
+        convallis.\n\n
+        Phasellus in aliquet mi. Pellentesque habitant morbi tristique senectus et netus et
+        malesuada fames ac turpis egestas. In volutpat arcu ut felis sagittis, in finibus massa
+        gravida. Pellentesque id tellus orci. Integer dictum, lorem sed efficitur ullamcorper,
+        libero justo consectetur ipsum, in mollis nisl ex sed nisl. Donec maximus ullamcorper
+        sodales. Praesent bibendum rhoncus tellus nec feugiat. In a ornare nulla. Donec rhoncus
+        libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
+        vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
+    </string>
+
+
 </resources>
