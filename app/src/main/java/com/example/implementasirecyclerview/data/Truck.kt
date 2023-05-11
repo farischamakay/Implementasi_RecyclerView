@@ -1,4 +1,4 @@
-package com.example.implementasirecyclerview
+package com.example.implementasirecyclerview.data
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

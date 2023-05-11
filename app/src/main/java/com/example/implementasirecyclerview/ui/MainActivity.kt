@@ -1,4 +1,4 @@
-package com.example.implementasirecyclerview
+package com.example.implementasirecyclerview.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,23 +6,28 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import com.example.implementasirecyclerview.adapter.ListTruckAdapter
+import com.example.implementasirecyclerview.R
+import com.example.implementasirecyclerview.data.Truck
+import com.example.implementasirecyclerview.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var rvTruck : RecyclerView
+    private lateinit var binding : ActivityMainBinding
     private val list = ArrayList<Truck>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        setSupportActionBar(findViewById(R.id.toolbar))
+        Thread.sleep(1000)
+        installSplashScreen()
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         supportActionBar?.title = "Jenis-Jenis Truck"
 
-        rvTruck = findViewById(R.id.rv_trucks)
-        rvTruck.setHasFixedSize(true)
+        binding.rvTrucks.setHasFixedSize(true)
 
         list.addAll(getListTruck())
         showRecycleView()
@@ -37,18 +42,17 @@ class MainActivity : AppCompatActivity() {
         when (item.itemId) {
             R.id.action_grid -> {
                 // set layout manager ke GridLayout ketika menu Grid diklik
-                rvTruck.layoutManager = GridLayoutManager(this, 2)
+                binding.rvTrucks.layoutManager = GridLayoutManager(this, 2)
                 return true
             }
             R.id.action_next -> {
-                Toast.makeText(this,"Halo", Toast.LENGTH_SHORT).show()
-                val pindah = Intent(this@MainActivity,DetailActivity::class.java)
+                val pindah = Intent(this@MainActivity, AboutActivity::class.java)
                 startActivity(pindah)
                 return true
             }
 
             R.id.action_list -> {
-                rvTruck.layoutManager = LinearLayoutManager(this)
+                binding.rvTrucks.layoutManager = LinearLayoutManager(this)
                 return true
             }
             else -> return super.onOptionsItemSelected(item)
@@ -69,23 +73,20 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun showRecycleView (){
-        rvTruck.layoutManager = LinearLayoutManager(this)
+        binding.rvTrucks.layoutManager = LinearLayoutManager(this)
         val listTruckAdapter = ListTruckAdapter(list)
-        rvTruck.adapter = listTruckAdapter
+        binding.rvTrucks.adapter = listTruckAdapter
 
         listTruckAdapter.setOnItemClickCallback(
             object : ListTruckAdapter.OnItemClickCallback {
                 override fun onItemClicked(data: Truck) {
-                    showSelectedTruck(data)
+                    val intentToDetail = Intent(this@MainActivity, DetailActivity::class.java)
+                    intentToDetail.putExtra("DATA", data)
+                    startActivity(intentToDetail)
                 }
             }
         )
 
-
-    }
-
-    private fun showSelectedTruck(truck: Truck){
-        Toast.makeText(this,"Kamu memilih " + truck.name, Toast.LENGTH_SHORT).show()
 
     }
 

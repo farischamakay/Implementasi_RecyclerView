@@ -1,16 +1,43 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources >
     <!-- Base application theme. -->
-    <style name="Base.Theme.ImplementasiRecyclerView" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <style name="Base.Theme.ImplementasiRecyclerView" parent="Theme.Material3.DayNight">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/background</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="actionBarStyle">@style/MyActionBar</item>
+        <item name="colorControlHighlight">@color/white</item>
+
     </style>
+
+    <style name="MyActionBar" parent="@style/Widget.Material3.ActionBar.Solid">
+        <item name="background">@color/background</item>
+        <item name="titleTextStyle">@style/MyTitleTextStyle</item>
+    </style>
+
+    <style name="MyTitleTextStyle">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+
 
     <style name="Theme.ImplementasiRecyclerView" parent="Base.Theme.ImplementasiRecyclerView" />
     <!-- Base application theme. -->
-    <style name="Base.Theme.AppCompat.Light.NoActionBar" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.AppCompat.DarkNight" parent="Theme.Material3.DayNight">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/background</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="actionBarStyle">@style/MyActionBar</item>
+        <item name="colorControlHighlight">@color/white</item>
     </style>
 
     <style name="Theme.AppCompat.Light.NoActionBar" parent="Base.Theme.AppCompat.Light.NoActionBar" />
+
+    <style name="Theme.App.SplashScreen" parent="Theme.SplashScreen">
+        <item name="android:windowSplashScreenBackground">@color/background</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@mipmap/ic_launcher_foreground</item>
+        <item name="postSplashScreenTheme">@style/Theme.ImplementasiRecyclerView</item>
+    </style>
 </resources>
