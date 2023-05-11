@@ -1,7 +1,7 @@
 ## Membuat Aplikasi Android Kotlin untuk pemula
 
 Demo :
-![nama-video](pemula - Made with Clipchamp.mp4)
+![nama-video](path/demo.mp4)
 
 Fitur yang ada pada aplikasi:
 
