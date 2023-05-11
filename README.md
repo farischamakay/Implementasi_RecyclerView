@@ -1,7 +1,7 @@
 ## Membuat Aplikasi Android Kotlin untuk pemula
 
 Demo :
-![nama-video](path/demo.mp4)
+[Youtube](https://www.youtube.com/embed/nuJRXtnCAn4?t=8)
 
 Fitur yang ada pada aplikasi:
 
