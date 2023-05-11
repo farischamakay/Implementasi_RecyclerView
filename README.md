@@ -1,7 +1,7 @@
 ## Membuat Aplikasi Android Kotlin untuk pemula
 
 Demo :
-<iframe src="https://drive.google.com/file/d/1gmVivbY3nD27RX6M3h62td5hMjj_w2OW/preview" width="640" height="480"> Demo </iframe>
+![nama-video](pemula - Made with Clipchamp.mp4)
 
 Fitur yang ada pada aplikasi:
 
