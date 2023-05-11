@@ -4,6 +4,8 @@
     <string name="description">Deskripsi</string>
     <string name="list">List</string>
     <string name="grid">Grid</string>
+    <string name="about">About</string>
+    <string name="about_desc">Truk atau prahoto adalah sebuah kendaraan beroda empat atau lebih untuk mengangkut barang. Truk juga disebut sebagai mobil barang. Dalam bentuk yang kecil, mobil barang disebut sebagai "pikap". Truk barang yang memiliki 3 sumbu, 1 di depan, dan tandem di belakang disebut sebagai truk tronton, dan untuk yang digunakan untuk angkutan peti kemas dalam bentuk tempelan disebut sebagai truk trailer.</string>
 
     <string-array name="data_name">
         <item>Truck CDD</item>
@@ -86,6 +88,8 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+    <string name="gambar_truck">Gambar Truck</string>
+    <string name="about_title">Trucks App</string>
 
 
 </resources>
